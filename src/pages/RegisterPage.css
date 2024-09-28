@@ -1,0 +1,44 @@
+/* src/pages/RegisterPage.css */
+
+.container {
+    max-width: 600px; /* Center the form */
+    margin: auto; /* Center the form on the page */
+    padding: 20px; /* Add some padding */
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    color: #2f4f4f; /* Dark green color for the text */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.btn-primary {
+    background-color: #4CAF50; /* Green background for the button */
+    border-color: #4CAF50; /* Matching border color */
+}
+
+.btn-primary:hover {
+    background-color: #45a049; /* Darker green on hover */
+    border-color: #45a049; /* Matching border color on hover */
+}
+
+.select {
+    /* Styling the select element for role */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ced4da; /* Light border */
+    background-color: #f8f9fa; /* Light background */
+}
+
+.select:focus {
+    border-color: #80bdff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue shadow on focus */
+}

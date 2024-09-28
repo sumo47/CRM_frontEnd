@@ -1,0 +1,33 @@
+/* src/pages/DashboardPage.css */
+
+.dashboard-page {
+    background-color: #2f4f4f;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #006400;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar h4 {
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #004d00;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
