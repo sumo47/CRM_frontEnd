@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import AuthContext from '../contexts/AuthContext';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate , Link} from 'react-router-dom'
+import './LoginPage.css'
 
 
 const LoginPage = () => {
@@ -36,7 +37,7 @@ const LoginPage = () => {
     };
 
     return (
-        <div className="container">
+        <div className="login-container">
             <h2 className="text-center my-4">Login</h2>
             <form onSubmit={handleLogin}>
                 <div className="form-group">
@@ -60,11 +61,11 @@ const LoginPage = () => {
                     />
                 </div>
                 <button type="submit" className="btn btn-primary btn-block mt-3">Login</button>
-                <a href='/register'><button type="button" className="btn btn-primary btn-block mt-3">Register</button>
-                </a>
+                <Link to='/register' className="btn btn-link">Register</Link>
             </form>
         </div>
     );
+    
 };
 
 export default LoginPage;

@@ -1,0 +1,174 @@
+/* src/pages/TaskPage.css */
+
+/* Main container styling */
+.task-page {
+    background-color: #111;
+    /* Dark background */
+    padding: 20px;
+    max-width: fit-content;
+    color: #d9d9d9;
+    /* Light grey text */
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+/* Green accent for headers and highlights */
+.text-green {
+    color: #28a745;
+    /* Hack The Box-like green */
+}
+
+/* Customized table styling */
+.table-custom {
+    background-color: #222;
+    /* Dark table background */
+    color: #d9d9d9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Softer shadow */
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid #28a745;
+    /* Green border */
+}
+
+/* Header styling for the table */
+.table-header {
+    background-color: #28a745;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Button styles */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #1f8c3b;
+    /* Darker green on hover */
+}
+
+/* Modal content with animations */
+.modal-content {
+    border-radius: 10px;
+    background-color: #222;
+    /* Dark modal background */
+    color: #d9d9d9;
+    /* Light grey text */
+    border: 1px solid #28a745;
+    animation: slideDown 0.5s ease;
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .table-custom {
+        font-size: 0.85rem;
+        /* Slightly smaller text for mobile */
+    }
+
+    .task-page h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-success {
+        font-size: 0.9rem;
+    }
+
+    .table-custom thead {
+        display: none;
+        /* Hide headers in mobile */
+    }
+
+    .table-custom tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        background-color: #1c1c1c;
+        /* Darker background for mobile rows */
+        border-radius: 8px;
+        padding: 15px;
+        border: 1px solid #28a745;
+        /* Green border for each row */
+    }
+
+    .table-custom tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+        border-bottom: 1px solid #333;
+        /* Soft bottom border */
+    }
+
+    .table-custom tbody tr td::before {
+        content: attr(data-label);
+        flex-basis: 50%;
+        font-weight: bold;
+        color: #28a745;
+    }
+
+    .table-custom tbody tr:last-child td {
+        border-bottom: none;
+    }
+}
+
+/* Enhanced hover and focus states */
+.table-custom tbody tr:hover {
+    background-color: rgba(162, 228, 190, 0.61);
+    /* transform: translateY(-5px); */
+    /* Subtle lift */
+    transition: all 0.3s ease;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: #28a745;
+    /* Green border for modal header and footer */
+}
+
+/* Form input fields styling inside the modal */
+.form-control {
+    background-color: #1c1c1c;
+    border: 1px solid #28a745;
+    color: #d9d9d9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #222;
+    border-color: #1f8c3b;
+    color: #d9d9d9;
+}
+
+/* Button hover effect */
+.modal-footer .btn-success:hover {
+    background-color: #1f8c3b;
+}
+
+/* Custom scrollbar for better UX */
+.table-custom::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-custom::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+}
+
+.table-custom::-webkit-scrollbar-thumb {
+    background-color: #28a745;
+    border-radius: 10px;
+}

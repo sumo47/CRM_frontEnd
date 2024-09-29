@@ -2,14 +2,11 @@
 
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
-// import AuthContext from '../contexts/AuthContext';
 import './RegisterPage.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 
 const RegisterPage = () => {
-    // const { register } = useContext(AuthContext);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -25,11 +22,6 @@ const RegisterPage = () => {
         });
     };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     register(formData);
-    // };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -40,9 +32,8 @@ const RegisterPage = () => {
                     window.location.href = '/login';
                 })
                 .catch((err) => {
-                    alert(err.data.message)
-                    console.log(err)
-
+                    alert(err.response.data.message);
+                    console.log(err);
                 });
         } catch (error) {
             alert('Registration failed. Try again.');
@@ -50,11 +41,11 @@ const RegisterPage = () => {
     };
 
     return (
-        <Container className="mt-5">
-            <h2>Register</h2>
-            <Form onSubmit={handleSubmit}>
+        <Container className="register-page mt-5">
+            <h2 className="text-center text-light">Register</h2>
+            <Form onSubmit={handleSubmit} className="form-container">
                 <Form.Group controlId="formUsername">
-                    <Form.Label>Username</Form.Label>
+                    <Form.Label className="text-light">Username</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="Enter username"
@@ -62,11 +53,12 @@ const RegisterPage = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </Form.Group>
 
                 <Form.Group controlId="formEmail">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label className="text-light">Email</Form.Label>
                     <Form.Control
                         type="email"
                         placeholder="Enter email"
@@ -74,11 +66,12 @@ const RegisterPage = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label className="text-light">Password</Form.Label>
                     <Form.Control
                         type="password"
                         placeholder="Password"
@@ -86,17 +79,19 @@ const RegisterPage = () => {
                         value={formData.password}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </Form.Group>
 
                 <Form.Group controlId="formRole">
-                    <Form.Label>Role</Form.Label>
+                    <Form.Label className="text-light">Role</Form.Label>
                     <Form.Control
                         as="select"
                         name="role"
                         value={formData.role}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     >
                         <option value="">Please choose role</option>
                         <option value="admin">Admin</option>
@@ -105,12 +100,13 @@ const RegisterPage = () => {
                     </Form.Control>
                 </Form.Group>
 
-                <Button variant="primary" type="submit" className="mt-3">
+                <Button variant="success" type="submit" className="mt-3">
                     Register
                 </Button>
-                <Link to='/login'><Button variant="primary" type="submit" className="mt-3 ml-2">
-                    Login
-                </Button>
+                <Link to='/login'>
+                    <Button variant="secondary" type="button" className="mt-3 ml-2">
+                        Login
+                    </Button>
                 </Link>
             </Form>
         </Container>

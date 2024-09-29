@@ -1,44 +1,81 @@
 /* src/pages/RegisterPage.css */
 
-.container {
-    max-width: 600px; /* Center the form */
-    margin: auto; /* Center the form on the page */
-    padding: 20px; /* Add some padding */
-    background-color: #ffffff; /* White background for the form */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+/* Main container styling */
+.register-page {
+    background-color: #111; /* Dark background */
+    color: #d9d9d9; /* Light grey text */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    min-height: 100vh; /* Ensure it covers the full height */
 }
 
+/* Headings */
 h2 {
-    text-align: center; /* Center the heading */
-    color: #2f4f4f; /* Dark green color for the text */
-    margin-bottom: 20px; /* Space below the heading */
+    text-align: center;
+    color: #28a745; /* Hack The Box-like green */
 }
 
-.form-group {
-    margin-bottom: 15px; /* Space between form groups */
+/* Form container */
+.form-container {
+    background-color: #222; /* Dark form background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-primary {
-    background-color: #4CAF50; /* Green background for the button */
-    border-color: #4CAF50; /* Matching border color */
+/* Button styles */
+.btn-success {
+    background-color: #28a745; /* Hack The Box-like green */
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #45a049; /* Darker green on hover */
-    border-color: #45a049; /* Matching border color on hover */
+.btn-success:hover {
+    background-color: #1f8c3b; /* Darker green on hover */
 }
 
-.select {
-    /* Styling the select element for role */
-    padding: 10px; /* Add padding */
-    border-radius: 5px; /* Rounded corners */
-    border: 1px solid #ced4da; /* Light border */
-    background-color: #f8f9fa; /* Light background */
+.btn-secondary {
+    background-color: #555; /* Grey for secondary button */
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
-.select:focus {
-    border-color: #80bdff; /* Blue border on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue shadow on focus */
+.btn-secondary:hover {
+    background-color: #777; /* Darker grey on hover */
+}
+
+/* Form input fields styling */
+.form-control {
+    background-color: #1c1c1c; /* Dark input background */
+    border: 1px solid #28a745; /* Green border */
+    color: #d9d9d9; /* Light grey text */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #222; /* Darker input on focus */
+    border-color: #1f8c3b; /* Darker green border on focus */
+    color: #d9d9d9; /* Light grey text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-page {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+    }
 }

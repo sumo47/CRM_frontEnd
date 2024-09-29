@@ -1,0 +1,108 @@
+/* src/pages/LoginPage.css */
+
+/* Apply dark theme to the entire body */
+body {
+    background-color: #111;
+    /* color: #d9d9d9; */
+    margin: 0;
+    /* Remove default margin */
+    font-family: Arial, sans-serif;
+    /* Use a consistent font */
+}
+
+/* Main container for the login page */
+.login-container {
+    background-color: #222;
+    /* Darker background for the login form */
+    padding: 40px;
+    max-width: 400px;
+    margin: 50px auto;
+    /* Center the form on the page */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling */
+.login-container h2 {
+    color: #28a745;
+    /* Hack The Box-like green */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form group styling */
+.login-container .form-group {
+    margin-bottom: 20px;
+    color: #d9d9d9;
+
+}
+
+/* Input fields styling */
+.login-container .form-control {
+    background-color: #1c1c1c;
+    /* Dark input background */
+    border: 1px solid #28a745;
+    /* Green border */
+    color: #d9d9d9;
+    /* Light grey text */
+}
+
+/* Focus state for input fields */
+.login-container .form-control:focus {
+    background-color: #222;
+    /* Darker background on focus */
+    border-color: #1f8c3b;
+    /* Slightly darker green */
+}
+
+/* Button styling */
+.login-container .btn-primary {
+    background-color: #28a745;
+    /* Green background */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-container .btn-primary:hover {
+    background-color: #1f8c3b;
+    /* Darker green on hover */
+}
+
+/* Link button styling */
+.login-container .btn-link {
+    margin-top: 10px;
+    text-align: center;
+    color: #28a745;
+    /* Green link */
+}
+
+/* Animation for form */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container {
+    animation: fadeIn 0.5s ease;
+    /* Fade-in animation */
+}
+
+/* Responsive styling */
+@media (max-width: 576px) {
+    .login-container {
+        padding: 20px;
+        /* Less padding on mobile */
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+        /* Smaller header */
+    }
+}

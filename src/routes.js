@@ -4,7 +4,9 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import CustomersPage from './pages/CustomersPage';
-import ProtectedRoute from './components/ProtectedRoute';
+// import ProtectedRoute from './components/ProtectedRoute';
+import LeadsPage from './pages/LeadsPage';
+import TaskPage from './pages/TasksPage';
 
 const AppRoutes = () => {
     return (
@@ -18,6 +20,22 @@ const AppRoutes = () => {
                 element={
                     
                         <CustomersPage />
+                   
+                } 
+            />
+            <Route 
+                path="/leads" 
+                element={
+                    
+                        <LeadsPage />
+                   
+                } 
+            />
+            <Route 
+                path="/tasks" 
+                element={
+                    
+                        <TaskPage />
                    
                 } 
             />
